@@ -1,0 +1,39 @@
+$blue: #007AD6;
+$green: #A1CA18;
+
+// $gray-1: #F4F5FB;
+// $gray-2: #c4c8dd;
+
+$primary: $blue;
+
+$font-family-base: 'Segoe UI';
+$font-weight-base: bold;
+
+$font-size-base: 1rem;
+// $font-size-xs: $font-size-base * 0.625;
+// $font-size-sm: $font-size-base * 0.75;
+// $font-size-md: $font-size-base * 0.875;
+// $font-size-lg: $font-size-base * 1.25;
+// $font-size-xl: $font-size-base * 1.7;
+
+$h1-font-size: $font-size-base * 1.75;
+// $headings-font-weight: bold;
+
+// $border-radius: 0.75rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);

@@ -1,0 +1,44 @@
+@import "variables";
+
+.avatar-big {
+  width: 13.8125rem;
+}
+
+.heart-icon {
+  width: 2rem;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.project-name {
+  color: #434344;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+
+  img {
+    width: 1rem;
+  }
+}
+
+.profile-box {
+  position: relative;
+  min-height: 29.5625rem;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 2px;
+  padding: 1rem;
+}
+
+.active-projects-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $green;
+}

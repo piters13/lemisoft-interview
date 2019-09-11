@@ -1,0 +1,7 @@
+<div class="list-wrapper">
+  <app-list-item
+    *ngFor="let worker of workers; trackBy: trackByFn"
+    [worker]="worker"
+    (click)="showWorkerDetails(worker)"
+  ></app-list-item>
+</div>
