@@ -8,17 +8,13 @@ import { Worker } from './services/mock-api.service';
 })
 export class AppComponent {
   title = 'lemisoft-interview-app';
-  listTitle = 'Pracownicy';
-  workerDetailsTitle = 'Szczegóły pracownika';
   isDetailsVisible = false;
   chosenWorker: Worker;
 
-  onWorkerClicked = (worker) => {
+  onWorkerClicked = (worker: Worker) => {
     this.chosenWorker = worker;
     this.isDetailsVisible = true;
   }
 
-  onClose = (value: boolean) => {
-    this.isDetailsVisible = value;
-  }
+  onClose = (value: boolean) => this.isDetailsVisible = value;
 }

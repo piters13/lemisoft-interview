@@ -1,13 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-      <h1 class="heading">{{ listTitle | uppercase }}</h1>
       <app-list (workerClicked)="onWorkerClicked($event)"></app-list>
     </div>
     <div class="col-1"></div>
-    <div class="col-7" *ngIf="isDetailsVisible">
-      <h1 class="heading">{{ workerDetailsTitle | uppercase }}</h1>
-      <app-worker-details-card [worker]="chosenWorker" (closed)="onClose()"></app-worker-details-card>
+    <div class="col-7">
+      <app-worker-details-card
+        *ngIf="isDetailsVisible"
+        [worker]="chosenWorker"
+        (closed)="onClose()"
+      ></app-worker-details-card>
     </div>
   </div>
 </div>

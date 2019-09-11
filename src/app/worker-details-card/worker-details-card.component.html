@@ -1,16 +1,17 @@
-<div class="profile-box d-flex flex-column justify-content-between">
+<h1 class="heading">{{ workerDetailsTitle | uppercase }}</h1>
+<div class="profile-box">
   <button (click)="close(true)" class="close-btn">
     <img src="/assets/Close.svg" />
   </button>
   <div>
     <div class="d-flex align-items-center justify-content-between">
-      <img src="/assets/User.svg" class="avatar-big pb-3" />
+      <img src="/assets/User.svg" class="avatar-big" />
       <div>
-        <div class="name pb-3">{{ worker.name }}</div>
+        <div class="name">{{ worker.name }}</div>
         <div style="font-weight: normal">{{ worker.sex }}</div>
       </div>
     </div>
-    <div class="active-projects-header pb-3">Aktywny projekt</div>
+    <div class="active-projects-header">Aktywny projekt</div>
     <span *ngFor="let project of worker.projects; let last = last" 
           class="project-name">
           {{ project }} {{last ? '' :  ', '}}

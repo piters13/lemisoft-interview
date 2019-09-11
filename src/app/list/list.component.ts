@@ -1,7 +1,7 @@
-import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
-import { MockApiService, Worker } from '../services/mock-api.service';
-import { Observable, timer, Subscription } from 'rxjs';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
+import { Subscription, timer } from 'rxjs';
 import { mergeMap, tap } from 'rxjs/operators';
+import { MockApiService, Worker } from '../services/mock-api.service';
 
 @Component({
   selector: 'app-list',
@@ -9,6 +9,7 @@ import { mergeMap, tap } from 'rxjs/operators';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit, OnDestroy {
+  listTitle = 'Pracownicy';
   workers: Worker[];
   subscription: Subscription;
   @Output() workerClicked = new EventEmitter<Worker>();
@@ -16,11 +17,12 @@ export class ListComponent implements OnInit, OnDestroy {
   constructor(private apiService: MockApiService) {}
 
   ngOnInit() {
-    this.subscription = timer(0, 1000).pipe(
-      tap(x => console.log(x + '. Api call!')),
-      mergeMap(() => this.apiService.get())
-    ).
-    subscribe(result => this.workers = result);
+    this.subscription = timer(0, 1000)
+      .pipe(
+        tap(x => console.log(x + '. Api call!')),
+        mergeMap(() => this.apiService.get())
+      )
+      .subscribe(result => (this.workers = result));
   }
 
   showWorkerDetails(worker: Worker) {

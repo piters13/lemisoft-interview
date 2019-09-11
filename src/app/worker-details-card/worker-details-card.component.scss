@@ -1,20 +1,19 @@
 @import "variables";
 
-.avatar-big {
-  width: 13.8125rem;
+.heading {
+  color: $blue;
+  margin-bottom: 2rem !important;
 }
 
-.heart-icon {
-  width: 2rem;
-}
-
-.name {
-  font-weight: bold;
-}
-
-.project-name {
-  color: #434344;
-  font-size: 1.5rem;
+.profile-box {
+  position: relative;
+  min-height: 29.5625rem;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 2px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .close-btn {
@@ -29,16 +28,28 @@
   }
 }
 
-.profile-box {
-  position: relative;
-  min-height: 29.5625rem;
-  box-shadow: 0px 3px 6px #00000029;
-  border-radius: 2px;
-  padding: 1rem;
+.avatar-big {
+  width: 13.8125rem;
+  padding-bottom: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 .active-projects-header {
   font-size: 1.5rem;
   font-weight: bold;
   color: $green;
+  padding-bottom: 1rem;
+}
+
+.project-name {
+  color: #434344;
+  font-size: 1.5rem;
+}
+
+.heart-icon {
+  width: 2rem;
 }

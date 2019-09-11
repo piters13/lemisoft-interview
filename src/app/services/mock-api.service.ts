@@ -66,8 +66,6 @@ export class MockApiService {
     }
   ];
 
-  constructor() {}
-
   get() {
     return of(this.workers);
   }
