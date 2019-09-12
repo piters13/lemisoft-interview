@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { of, Observable } from 'rxjs';
 
 export interface Worker {
   id: number;
@@ -66,7 +66,10 @@ export class MockApiService {
     }
   ];
 
-  get() {
+  get(): Observable<Worker[]> {
     return of(this.workers);
+
+    // przy użyciu HttpClient aby pobrać dane z backendu wyglądało by to mniej więcej tak:
+    // return this.http.get<Worker[]>(this.someDefinedURL);
   }
 }

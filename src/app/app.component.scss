@@ -1,3 +1,41 @@
+@import "variables";
+
 .container {
-  margin: 13.3125rem auto;
+  margin: 5.3125rem auto;
+
+  @include media-breakpoint-up(lg) {
+    margin: 13.3125rem auto;
+  }
+}
+
+.list {
+  @include make-col-ready();
+  order: 2;
+
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+    order: 1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  }
+}
+
+.worker-details-box {
+  @include make-col-ready();
+  @include make-col(12);
+  order: 1;
+  padding-bottom: 1rem;
+
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+    order: 2;
+    padding-bottom: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(7);
+    order: 3;
+  }
 }
