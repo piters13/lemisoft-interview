@@ -1,6 +1,10 @@
 # lemisoft-interview
 interview task for Lemisoft
 
+this project is using `yarn` as package manager
+
+to start the project type `yarn` and then `yarn start`
+
 # LemisoftInterviewApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
